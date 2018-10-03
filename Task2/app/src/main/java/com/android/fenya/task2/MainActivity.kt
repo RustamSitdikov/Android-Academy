@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.content.Intent
 import android.net.Uri
+import android.support.design.widget.Snackbar
 import android.util.Log
 import android.widget.EditText
 
@@ -16,11 +17,7 @@ class MainActivity : AppCompatActivity() {
 
     private val LOG_TAG: String = MainActivity::class::simpleName.toString()
 
-    private val DATA_SCHEME: String = "mailto:"
-    private val EMAIL_ADDRESS: String = "sitdikov@phystech.edu"
-    private val EMAIL_SUBJECT: String = "feedback"
-
-    lateinit var message: EditText
+    lateinit var messageEdit: EditText
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,23 +26,12 @@ class MainActivity : AppCompatActivity() {
 
         setContentView(R.layout.activity_main)
 
-        message = findViewById(R.id.feedback_message)
-
+        messageEdit = findViewById(R.id.feedback_message)
         val button: Button = findViewById(R.id.feedback_message_button)
         button.setOnClickListener {
-            val body: String = message.text.toString()
-
-            val intent = Intent().apply {
-                action = Intent.ACTION_SENDTO
-                intent.data = Uri.parse(DATA_SCHEME)
-                putExtra(Intent.EXTRA_EMAIL, EMAIL_ADDRESS)
-                putExtra(Intent.EXTRA_SUBJECT, EMAIL_SUBJECT)
-                putExtra(Intent.EXTRA_TEXT, body)
-                type = "text/plain" // message/rfc822
-            }
-            if (intent.resolveActivity(packageManager) != null) {
-                startActivity(Intent.createChooser(intent, "Send email via..."))
-            }
+            val messageString: String = messageEdit.text.toString()
+            
+            openEmailApp(messageString)
         }
     }
 
@@ -53,7 +39,7 @@ class MainActivity : AppCompatActivity() {
         Log.i(LOG_TAG, "onSaveInstanceState")
 
         outState?.run {
-            putString(ARGS_BUISNESS_CARD_FEEDBACK_MESSAGE, message.text.toString())
+            putString(ARGS_BUISNESS_CARD_FEEDBACK_MESSAGE, messageEdit.text.toString())
         }
 
         super.onSaveInstanceState(outState)
@@ -64,6 +50,23 @@ class MainActivity : AppCompatActivity() {
 
         Log.i(LOG_TAG, "onRestoreInstanceState")
 
-        message.setText(savedInstanceState?.getString(ARGS_BUISNESS_CARD_FEEDBACK_MESSAGE))
+        messageEdit.setText(savedInstanceState?.getString(ARGS_BUISNESS_CARD_FEEDBACK_MESSAGE))
+    }
+
+    private fun openEmailApp(messageString: String) {
+        val intent = Intent().apply {
+            action = Intent.ACTION_SENDTO
+            intent.data = Uri.parse(getString(R.string.email_intent_scheme))
+            putExtra(Intent.EXTRA_EMAIL, getString(R.string.email_address))
+            putExtra(Intent.EXTRA_SUBJECT, getString(R.string.email_subject))
+            putExtra(Intent.EXTRA_TEXT, messageString)
+            type = "text/plain"
+        }
+
+        if (intent.resolveActivity(packageManager) != null) {
+            startActivity(Intent.createChooser(intent, "Send email via..."))
+        } else {
+            Snackbar.make(messageEdit, R.string.error_no_email_app, Snackbar.LENGTH_LONG)
+        }
     }
 }

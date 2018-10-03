@@ -13,4 +13,9 @@
     <string name="buisness_card_key_info_about_education">Student of MIPT</string>
     <string name="buisness_card_key_info_about_kotlin">Crazy Kotlin developer</string>
     <string name="buisness_card_key_info_about_me">Cool dude</string>
+
+    <string name="email_intent_scheme" translatable="false">mailto:</string>
+    <string name="email_address" translatable="false">sitdikov@phystech.edu</string>
+    <string name="email_subject">Feedback</string>
+    <string name="error_no_email_app">No email apps were found.</string>
 </resources>

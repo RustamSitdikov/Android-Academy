@@ -11,4 +11,7 @@
     <string name="buisness_card_key_info_about_education">Студент МФТИ</string>
     <string name="buisness_card_key_info_about_kotlin">Безумный Kotlin разработчик</string>
     <string name="buisness_card_key_info_about_me">Классный чувак</string>
+
+    <string name="email_subject">Обратная связь</string>
+    <string name="error_no_email_app">Не найдены почтовые приложения.</string>
 </resources>
