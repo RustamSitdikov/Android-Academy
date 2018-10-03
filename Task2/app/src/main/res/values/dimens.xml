@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Buisness Card -->
+    <dimen name="buisness_card_item_text_size">16sp</dimen>
+    <dimen name="buisness_card_item_size">28dp</dimen>
+    <dimen name="buisness_card_item_half_margin">8dp</dimen>
+    <dimen name="buisness_card_item_margin">16dp</dimen>
+
+    <dimen name="buisness_card_photo_width">200dp</dimen>
+    <dimen name="buisness_card_photo_height">200dp</dimen>
+
+    <dimen name="buisness_card_content_padding_start">34dp</dimen>
+    <dimen name="buisness_card_content_padding_end">0dp</dimen>
+
+    <!-- Divider -->
+    <dimen name="divider_height">1dp</dimen>
+</resources>

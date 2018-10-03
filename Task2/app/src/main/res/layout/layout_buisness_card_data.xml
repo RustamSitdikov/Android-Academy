@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_content"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/buisness_card_content_padding_start"
+    android:paddingStart="@dimen/buisness_card_content_padding_start"
+    android:paddingRight="@dimen/buisness_card_content_padding_end"
+    android:paddingEnd="@dimen/buisness_card_content_padding_end" >
+
+    <!-- Buisness card key info -->
+    <TextView
+        android:layout_width="match_parent"
+        style="@style/BuisnessCardItemKeyInfo"
+        android:drawableLeft="@drawable/ic_kotlin"
+        android:drawableStart="@drawable/ic_kotlin"
+        android:text="@string/buisness_card_key_info_about_kotlin" />
+
+    <TextView
+        android:layout_width="match_parent"
+        style="@style/BuisnessCardItemKeyInfo"
+        android:drawableLeft="@drawable/ic_mipt"
+        android:drawableStart="@drawable/ic_mipt"
+        android:text="@string/buisness_card_key_info_about_education" />
+
+    <TextView
+        android:layout_width="match_parent"
+        style="@style/BuisnessCardItemKeyInfo"
+        android:drawableLeft="@drawable/ic_android"
+        android:drawableStart="@drawable/ic_android"
+        android:text="@string/buisness_card_key_info_about_me" />
+
+    <!-- Buisness card description -->
+    <View
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        style="@style/BuisnessCardDivider"
+        android:background="@color/red" />
+
+    <TextView
+        android:id="@+id/card_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/buisness_card_item_margin"
+        android:text="@string/buisness_card_description" />
+
+    <View
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        style="@style/BuisnessCardDivider"
+        android:background="@color/red" />
+
+    <!-- Buisness card feedback -->
+    <EditText
+        android:id="@+id/feedback_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/BuisnessCardItemMargin"
+        android:hint="@string/buisness_card_message_content"
+        android:inputType="textMultiLine"
+        tools:ignore="Autofill" />
+
+    <Button
+        android:id="@+id/feedback_message_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/BuisnessCardItemMargin"
+        android:layout_gravity="end"
+        android:textColor="@color/red"
+        android:background="?android:attr/selectableItemBackground"
+        android:text="@string/buisness_card_send_message" />
+
+    <!-- Buisness card social -->
+    <include layout="@layout/layout_buisness_card_social" />
+</LinearLayout>

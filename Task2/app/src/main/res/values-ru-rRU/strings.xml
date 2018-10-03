@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Визитная карточка -->
+    <string name="buisness_card_label">Русатм Ситдиков</string>
+    <string name="buisness_card_description">
+        Rustam является младшим Java-Kotlin-Python-Go-JavaScript-Android разработчиком.
+    </string>
+    <string name="buisness_card_message_content">Введите сообщение…</string>
+    <string name="buisness_card_send_message">отправить сообщение</string>
+
+    <string name="buisness_card_key_info_about_education">Студент МФТИ</string>
+    <string name="buisness_card_key_info_about_kotlin">Безумный Kotlin разработчик</string>
+    <string name="buisness_card_key_info_about_me">Классный чувак</string>
+</resources>

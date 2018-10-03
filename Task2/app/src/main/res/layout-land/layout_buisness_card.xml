@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <!-- Buisness card photo -->
+    <ImageView
+        android:id="@+id/card_photo"
+        android:layout_width="@dimen/buisness_card_photo_width"
+        android:layout_height="match_parent"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_card" />
+
+    <!-- Buisness card data -->
+    <include layout="@layout/layout_buisness_card_data" />
+
+</LinearLayout>

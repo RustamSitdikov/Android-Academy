@@ -1,3 +1,16 @@
 <resources>
-    <string name="app_name">Task2</string>
+    <string name="app_name" translatable="false">Task2</string>
+    <string name="nothing" translatable="false" />
+
+    <!-- Buisness Card -->
+    <string name="buisness_card_label">Rustam Sitdikov</string>
+    <string name="buisness_card_description">
+        Rustam is junior Java-Kotlin-Python-Go-JavaScript-Android developer.
+    </string>
+    <string name="buisness_card_message_content">Enter a message…</string>
+    <string name="buisness_card_send_message">send message</string>
+
+    <string name="buisness_card_key_info_about_education">Student of MIPT</string>
+    <string name="buisness_card_key_info_about_kotlin">Crazy Kotlin developer</string>
+    <string name="buisness_card_key_info_about_me">Cool dude</string>
 </resources>

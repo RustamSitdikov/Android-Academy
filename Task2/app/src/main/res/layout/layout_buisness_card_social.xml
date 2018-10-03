@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    style="@style/BuisnessCardItemHeight"
+    android:gravity="center" >
+
+    <ImageView
+        android:id="@+id/vk_icon"
+        style="@style/BuisnessCardItemSocial"
+        android:src="@drawable/ic_vk"
+        android:contentDescription="@string/nothing" />
+
+    <ImageView
+        android:id="@+id/instagram_icon"
+        style="@style/BuisnessCardItemSocial"
+        android:src="@drawable/ic_instagram"
+        android:contentDescription="@string/nothing" />
+
+    <ImageView
+        android:id="@+id/telegram_icon"
+        style="@style/BuisnessCardItemSocial"
+        android:src="@drawable/ic_telegram"
+        android:contentDescription="@string/nothing" />
+
+</LinearLayout>
